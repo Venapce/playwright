@@ -1,0 +1,31 @@
+{
+  "name": "@flomorphic/playwright-plugin",
+  "version": "0.1.0",
+  "description": "Playwright node for the Inflowenger workflow canvas \u2014 open and scrape pages, screenshot, print to PDF, evaluate JavaScript, and run a scripted browser flow. Each call brings its own browser profile. Built on @inflowenger/node-plugin-sdk.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist",
+    "start": "node dist/main.js",
+    "dev": "tsx src/main.ts",
+    "browsers": "playwright install chromium",
+    "browsers:all": "playwright install",
+    "browsers:deps": "playwright install --with-deps chromium",
+    "convert": "node dist/tools/convert-recording.js",
+    "convert:dev": "tsx src/tools/convert-recording.ts",
+    "codegen": "playwright codegen"
+  },
+  "dependencies": {
+    "@inflowenger/node-plugin-sdk": "^0.1.9",
+    "playwright": "^1.63.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.0"
+  }
+}
