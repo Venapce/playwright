@@ -36,7 +36,7 @@ async function main() {
 
   p.intro({
     name: "PLAYWRIGHT",
-    author: "FloMorphic",
+    author: "Venapce Dev. Team",
     version,
     settings: registry.settingsForm(),
     manual: MANUAL,
